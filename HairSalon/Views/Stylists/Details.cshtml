@@ -1,0 +1,10 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+<p>TEST CONTROLLER TEXT</p>
+@foreach (Client client in Model.Clients)
+{
+  @Html.TextBox($"{client.Name}")
+}
