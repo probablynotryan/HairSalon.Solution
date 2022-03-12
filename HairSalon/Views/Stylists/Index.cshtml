@@ -4,11 +4,12 @@
 
 @using HairSalon.Models;
 
-<h3>Stylists</h3>
+<h5>Stylists</h5>
 <ul>
 @foreach (Stylist stylist in Model)
   {
     <li> @Html.ActionLink($"{stylist.Name} -- {stylist.Description}", "Details", new {id = stylist.StylistId}) </li>
   }
 </ul>
-<button class="btn-primary"> @Html.ActionLink("Add Stylist", "Create") </button>
+<button class="btn-blue"> @Html.ActionLink("Add Stylist", "Create") </button>
+<!-- <button class="btn-red"> @Html.ActionLink("Remove Stylist", "Delete") </button> -->
