@@ -1,6 +1,14 @@
 body {
-  background-color: lightblue;
+  background-image: url("../media/background.jpg");
+  background-repeat: repeat;
 }
 p {
-  font-size: 100px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  margin-top: 20px;
+  background-color: white;
+  border: solid purple;
+  padding-top: 20px;
 }
