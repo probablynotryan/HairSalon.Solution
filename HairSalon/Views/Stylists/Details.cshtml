@@ -3,9 +3,10 @@
 }
 
 @using HairSalon.Models;
-<p>Clients</p>
+<p> @Model.Name's Clients</p>
 @foreach (Client client in Model.Clients)
 {
   @client.Name
 }
-<button class="btn-blue">Add Client</button>
+</p>
+<button class="btn-blue"> @Html.ActionLink("Add Client", "Create", "Clients") </button>

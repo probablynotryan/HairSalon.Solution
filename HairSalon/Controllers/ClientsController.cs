@@ -15,5 +15,10 @@ namespace HairSalon.Controllers
     {
       _db = db;
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
   }
 }
