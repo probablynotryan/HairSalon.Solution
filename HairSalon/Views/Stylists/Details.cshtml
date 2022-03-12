@@ -5,21 +5,23 @@
 
 <div class="row">
   <div class="col">
-<h4>@Model.Name's Clients</h4>
-<ul>
-@if (Model.Clients.Count == 0)
-{
-  <li>No clients currently assigned to this stylist.</li>
-}
-@foreach (Client client in Model.Clients)
-{
-  <li>@client.Name</li>
-}
-</ul>
+    <h4>@Model.Name's Clients</h4>
+    <ul>
+      @if (Model.Clients.Count == 0)
+      {
+        <li>No clients currently assigned to this stylist.</li>
+      }
+      @foreach (Client client in Model.Clients)
+      {
+        <li>@client.Name</li>
+      }
+    </ul>
   </div>
   <div class="col">
-<h4>About This Stylist</h4>
-<p>@Model.Description</p>
-  </div></div>
+    <h4>About This Stylist</h4>
+    <p>@Model.Description</p>
+  </div>
+</div>
 <button class="btn-purple"> @Html.ActionLink("Back", "Index")</button>
 <button class="btn-blue"> @Html.ActionLink("Add Client", "Create", "Clients", new {stylistId = Model.StylistId}) </button>
+<!-- <button class="btn-red"> @Html.ActionLink("Remove Stylist", "Delete", new {stylistId = Model.StylistId})</button> -->

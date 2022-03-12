@@ -8,8 +8,11 @@
 <ul>
 @foreach (Stylist stylist in Model)
   {
-    <li> @Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId}) </li>
+    <li>
+      @Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId})
+    </li>
   }
 </ul>
+<button class="btn-purple"> @Html.ActionLink("Back", "Index", "/")</button>
 <button class="btn-blue"> @Html.ActionLink("Add Stylist", "Create") </button>
 <!-- <button class="btn-red"> @Html.ActionLink("Remove Stylist", "Delete") </button> -->
