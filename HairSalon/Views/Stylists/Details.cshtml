@@ -3,8 +3,9 @@
 }
 
 @using HairSalon.Models;
-<p>TEST CONTROLLER TEXT</p>
+<p>Clients</p>
 @foreach (Client client in Model.Clients)
 {
-  @Html.TextBox($"{client.Name}")
+  @client.Name
 }
+<button class="btn-blue">Add Client</button>
