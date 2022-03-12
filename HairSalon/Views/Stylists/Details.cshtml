@@ -3,10 +3,16 @@
 }
 
 @using HairSalon.Models;
-<p> @Model.Name's Clients</p>
+<h4>@Model.Name's Clients</h4>
+<ul>
+@if (Model.Clients.Count == 0)
+{
+  <li>No clients currently assigned to this stylist.</li>
+}
 @foreach (Client client in Model.Clients)
 {
-  @client.Name
+  <li>@client.Name</li>
 }
-</p>
-<button class="btn-blue"> @Html.ActionLink("Add Client", "Create", "Clients") </button>
+</ul>
+<button class="btn-purple"> @Html.ActionLink("Back", "Index")</button>
+<button class="btn-blue"> @Html.ActionLink("Add Client", "Create", "Clients", new {stylistId = Model.StylistId}) </button>
