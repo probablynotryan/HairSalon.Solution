@@ -28,7 +28,7 @@ CREATE TABLE `clients` (
   `stylistid` int NOT NULL,
   `phonenumber` varchar(45) NOT NULL,
   PRIMARY KEY (`clientid`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,11 +40,12 @@ DROP TABLE IF EXISTS `stylists`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stylists` (
   `stylistid` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
-  `description` varchar(355) DEFAULT NULL,
-  `position` varchar(100) DEFAULT NULL,
+  `name` varchar(45) NOT NULL,
+  `description` varchar(355) NOT NULL,
+  `position` varchar(100) NOT NULL,
+  `picturepath` varchar(955) DEFAULT NULL,
   PRIMARY KEY (`stylistid`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +57,4 @@ CREATE TABLE `stylists` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-12 19:54:01
+-- Dump completed on 2022-03-13 12:46:01
