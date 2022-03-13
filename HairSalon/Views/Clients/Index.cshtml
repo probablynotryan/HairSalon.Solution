@@ -7,7 +7,10 @@
 }
 @using HairSalon.Models;
 <h4>View All Clients</h4>
-<input type="text" id="search-clients" onkeyup="search()" placeholder="Search clients..">
+@if (Model.Count > 0)
+{
+  <input type="text" id="search-clients" onkeyup="search()" placeholder="Search clients..">
+}
 <div id="client-box">
   <ul>
     @if (Model.Count == 0)
