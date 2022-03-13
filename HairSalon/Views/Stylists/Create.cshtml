@@ -7,20 +7,20 @@
 @using (Html.BeginForm())
 {
   <div class="form-group">
-  @Html.LabelFor(model => model.Name, "Full Name:")
-  @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.Name, "Full Name:")
+    @Html.TextBoxFor(model => model.Name, new {required = "required"})
   </div>
   <div class="form-group">
-  @Html.LabelFor(model => model.Description, "Specialities/Notes:")
-  @Html.TextBoxFor(model => model.Description)
+    @Html.LabelFor(model => model.Description, "Specialities/Notes:")
+    @Html.TextBoxFor(model => model.Description, new {required = "required"})
   </div>
   <div class="form-group">
-  <select id="Position" name="Position">
-    <option value="">Select Position</option>
-    <option value="New Hire">New Hire</option>
-    <option value="Trainee">Trainee</option>
-    <option value="Stylist">Stylist</option>
-  </select>
+    <label for="Position">Current Position: </label>
+    <select class="form-select" id="Position" name="Position">
+      <option value="New Hire">New Hire</option>
+      <option value="Trainee">Trainee</option>
+      <option value="Stylist">Stylist</option>
+    </select>
   </div>
   <input class="btn-blue" type="submit" value="Add Stylist">
 }
