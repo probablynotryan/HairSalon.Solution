@@ -6,6 +6,11 @@
 
 <h5>Stylists</h5>
 <ul>
+@if (Model.Count == 0)
+{
+  <li>There currently aren't any stylists listed at your Salon.</li>
+  <li>Press "Add Stylist" below to start adding your staff.</li>
+}
 @foreach (Stylist stylist in Model)
   {
     <li>@Html.ActionLink($"{stylist.Name}", "Details", new {id = stylist.StylistId}) (@stylist.Position)</li>
@@ -13,4 +18,3 @@
 </ul>
 <button class="btn-purple"> @Html.ActionLink("Back", "Index", "/")</button>
 <button class="btn-blue"> @Html.ActionLink("Add Stylist", "Create") </button>
-<!-- <button class="btn-red"> @Html.ActionLink("Remove Stylist", "Delete") </button> -->
