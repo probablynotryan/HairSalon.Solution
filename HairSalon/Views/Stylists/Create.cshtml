@@ -12,7 +12,12 @@
   </div>
   <div class="form-group">
     @Html.LabelFor(model => model.Description, "Specialities/Notes:")
-    @Html.TextBoxFor(model => model.Description, new {required = "required"})
+    @Html.TextBoxFor(model => model.Description, new {required = "required", id = "bigger-text-box"})
+  </div>
+  <div class="form-group">
+    @Html.LabelFor(model => model.PicturePath, "Picture of Stylist (URL Path):")
+    @Html.TextBoxFor(model => model.PicturePath)
+    <small class="form-text text-muted">Please enter a URL of a square picture of this employee. (Not required.)</small>
   </div>
   <div class="form-group">
     <label for="Position">Current Position: </label>
@@ -22,5 +27,6 @@
       <option value="Stylist">Stylist</option>
     </select>
   </div>
+  <button class="btn-purple"> @Html.ActionLink("Back", "Index")</button>
   <input class="btn-blue" type="submit" value="Add Stylist">
 }

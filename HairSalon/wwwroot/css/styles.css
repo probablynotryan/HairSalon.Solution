@@ -60,3 +60,17 @@ li {
   border: 1px solid #ddd;
   margin-bottom: 12px; 
 }
+
+#staff-picture {
+  height: 150px;
+  width: 150px;
+}
+#center-image {
+  margin-right: 5px;
+  float: left;
+}
+
+#bigger-text-box {
+  height: 200px;
+  width: 300px;
+}

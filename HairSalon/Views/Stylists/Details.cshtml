@@ -6,7 +6,10 @@
 <div class="row">
   <div class="col">
     <h4>@Model.Name's Clients</h4>
-    <input type="text" id="search-clients" onkeyup="search()" placeholder="Search clients..">
+    @if (Model.Clients.Count > 0)
+    {
+      <input type="text" id="search-clients" onkeyup="search()" placeholder="Search clients..">
+    }
     <div id="client-box">
       <ul>
         @if (Model.Clients.Count == 0)
@@ -22,6 +25,12 @@
   </div>
   <div class="col">
     <h4>About This Stylist</h4>
+    <div id="center-image">
+      @if (@Model.PicturePath != null)
+      {
+        <img src=@Model.PicturePath alt="A picture of @Model.Name"  id="staff-picture">
+      }
+    </div>
     <p>@Model.Description</p>
   </div>
 </div>
