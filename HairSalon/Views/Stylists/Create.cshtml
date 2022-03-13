@@ -1,15 +1,26 @@
 @{
   Layout = "_Layout";
 }
-
 @model HairSalon.Models.Stylist;
 
 <h3>Add new stylist</h3>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name, "Name")
+  <div class="form-group">
+  @Html.LabelFor(model => model.Name, "Full Name:")
   @Html.TextBoxFor(model => model.Name)
-  @Html.LabelFor(model => model.Description, "Description")
+  </div>
+  <div class="form-group">
+  @Html.LabelFor(model => model.Description, "Specialities/Notes:")
   @Html.TextBoxFor(model => model.Description)
+  </div>
+  <div class="form-group">
+  <select id="Position" name="Position">
+    <option value="">Select Position</option>
+    <option value="New Hire">New Hire</option>
+    <option value="Trainee">Trainee</option>
+    <option value="Stylist">Stylist</option>
+  </select>
+  </div>
   <input class="btn-blue" type="submit" value="Add Stylist">
 }
