@@ -1,12 +1,19 @@
 @{
   Layout = "_Layout";
 }
-<h3>Test</h3>
 @model HairSalon.Models.Client;
+
+<h4>New Client</h4>
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.StylistId, new {@Value = ViewBag.StylistId})
-  @Html.LabelFor(model => model.Name)
+ <div class="form-group">
+  @Html.LabelFor(model => model.Name, "Client's Name:")
   @Html.TextBoxFor(model => model.Name)
+  </div>
+  <div class="form-group">
+  @Html.LabelFor(model => model.PhoneNumber, "Phone Number:")
+  @Html.TextBoxFor(model => model.PhoneNumber)
+  </div>
   <input class="btn-blue" type="submit" value="Add">
 }
