@@ -25,11 +25,11 @@ This MVC website allows Claire (of the infamous Eau Claire's Salon) to view/add 
 * Install [.NET 5](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net) if it is not installed already.
 * In order to properly run the database, [install MySQL](https://dev.mysql.com/downloads/mysql/).
 * In your terminal, log into MySql by entering: ```mysql -uroot -p```
-* Type in the password provided during installation.
+* Type in the password provided during MySql installation.
 * Create the salon's database by entering: ```CREATE DATABASE hair_salon;```
 * Exit MySql by typing ```quit``` in your terminal.
 * Still in terminal, navigate to your downloaded repository. _(ie: User/desktop/HairSalon.Solution/)_
-* Enter in ```mysql -u root -p hair_salon < ryan_bass.sql``` to copy in the tables used in this project.
+* Enter in ```mysql -u root -p hair_salon < ryan_bass.sql``` to copy in the tables used in this project. (You'll need to enter your password in again.)
 * (We're still using terminal) Navigate to inside HairSalon.Solution/HairSalon and enter ```touch appsettings.json```. You can then edit that created file with a code editor of your choice and enter this on in it, followed by saving the file. (Be sure to replace PASSWORD with the password you provided during installation).: 
   ```csharp
   {
