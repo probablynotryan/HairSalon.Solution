@@ -9,11 +9,12 @@
   @Html.HiddenFor(model => model.StylistId, new {@Value = ViewBag.StylistId})
  <div class="form-group">
   @Html.LabelFor(model => model.Name, "Client's Name:")
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new {required = "required"})
   </div>
   <div class="form-group">
   @Html.LabelFor(model => model.PhoneNumber, "Phone Number:")
-  @Html.TextBoxFor(model => model.PhoneNumber)
+  @Html.TextBoxFor(model => model.PhoneNumber, new {required = "required"})
   </div>
-  <input class="btn-blue" type="submit" value="Add">
+<button class="btn-purple">@Html.ActionLink("Back", "Details", "Stylists", new {id = ViewBag.StylistId})</button>
+<input class="btn-blue" type="submit" value="Add">
 }

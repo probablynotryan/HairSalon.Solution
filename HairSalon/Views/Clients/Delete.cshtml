@@ -1,7 +1,6 @@
 @{
   Layout = "_Layout";
 }
-
 @model HairSalon.Models.Client
 
 <h2>Are you sure you want to remove this client?</h2>
@@ -11,6 +10,6 @@
 <br>
 @using (Html.BeginForm())
 {
-  <button class="btn-purple">@Html.ActionLink("Back", "Index")</button>
+  <button class="btn-purple">@Html.ActionLink("Back", "Details", "Stylists", new {id = Model.StylistId})</button>
   <input type="submit" class="btn-red" value="Delete" />
 }
