@@ -31,9 +31,9 @@
     <p>@Model.Description</p>
   </div>
 </div>
-<!-- <div id="float-right">
+<div id="float-right">
   <button class="btn-red" type="button"> @Html.ActionLink("Remove Stylist", "Delete", new {stylistId = Model.StylistId})</button>
-</div> -->
+</div>
 <button class="btn-purple"> @Html.ActionLink("Back", "Index")</button>
 <button class="btn-blue"> @Html.ActionLink("Add Client", "Create", "Clients", new {stylistId = Model.StylistId}) </button>
 <script src="~/scripts/search.js"></script>
