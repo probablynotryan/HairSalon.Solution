@@ -42,16 +42,16 @@ namespace HairSalon.Controllers
       return RedirectToAction("Index");
     }
   
-    public ActionResult Delete(int StylistId)
+    public ActionResult Delete(int stylistId)
     {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == StylistId);
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == stylistId);
       return View(thisStylist);
     }
 
     [HttpPost, ActionName("Delete")]
-    public ActionResult DeleteConfirmed(int StylistId)
+    public ActionResult DeleteConfirmed(int stylistId)
     {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == StylistId);
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == stylistId);
       _db.Stylists.Remove(thisStylist);
       _db.SaveChanges();
       return RedirectToAction("Index");

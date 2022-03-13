@@ -15,7 +15,13 @@
         }
         @foreach (Client client in Model.Clients)
         {
-          <li>@client.Name  @client.PhoneNumber</li>
+          <li>
+            @client.Name  
+            @client.PhoneNumber 
+            <div id="float-right">
+              <a href='@Url.Action("Delete", "Clients", new {clientId = client.ClientId})'><img id="delete-button" src="~/media/delete-button.jpg"></a>
+            </div>
+          </li>
         }
     </ul>
     </div>
