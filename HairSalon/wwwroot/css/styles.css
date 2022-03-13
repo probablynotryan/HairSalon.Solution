@@ -66,11 +66,17 @@ li {
   width: 150px;
   border: dotted black;
 }
-#center-image {
+#float-left {
   margin-right: 9px;
   float: left;
 }
 
+#float-right {
+  float: right;
+}
+#about-div {
+  margin-top: 43px;
+}
 #bigger-text-box {
   height: 200px;
   width: 300px;
