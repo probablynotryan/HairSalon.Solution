@@ -77,7 +77,8 @@ li {
 #about-div {
   margin-top: 43px;
 }
-#bigger-text-box {
-  height: 200px;
+#bigger-text-area {
+  resize: none;
+  height: 100px;
   width: 300px;
 }
