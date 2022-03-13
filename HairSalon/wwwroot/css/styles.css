@@ -3,7 +3,7 @@ body {
   background-repeat: repeat;
 }
 p {
-  font-size: 20px;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
 }
 .container {
@@ -64,9 +64,10 @@ li {
 #staff-picture {
   height: 150px;
   width: 150px;
+  border: dotted black;
 }
 #center-image {
-  margin-right: 5px;
+  margin-right: 9px;
   float: left;
 }
 
