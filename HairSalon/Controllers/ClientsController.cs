@@ -30,11 +30,11 @@ namespace HairSalon.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Client client)
+    public ActionResult Create(Client client, string StylistId)
     {
       _db.Clients.Add(client);
       _db.SaveChanges();
-      return RedirectToAction("Index", "Stylists");
+      return RedirectToAction("Details", "Stylists", new {id = StylistId});
     }
   }
 }
