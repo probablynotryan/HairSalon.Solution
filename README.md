@@ -30,15 +30,14 @@ This MVC website allows Claire (of the infamous Eau Claire's Salon) to view/add 
 * Exit MySql by typing ```quit``` in your terminal.
 * Still in terminal, navigate to your downloaded repository. _(ie: User/desktop/HairSalon.Solution/)_
 * Enter in ```mysql -u root -p hair_salon < ryan_bass.sql``` to copy in the tables used in this project.
-* (We're still using terminal) Navigate to inside HairSalon.Solution/HairSalon and enter ```touch appsettings.json```. You can then edit that created file with a code editor of your choice and enter this on in it: 
-  ```
+* (We're still using terminal) Navigate to inside HairSalon.Solution/HairSalon and enter ```touch appsettings.json```. You can then edit that created file with a code editor of your choice and enter this on in it, followed by saving the file. (Be sure to replace PASSWORD with the password you provided during installation).: 
+  ```csharp
   {
   "ConnectionStrings": {
       "DefaultConnection": "Server=localhost;Port=3306;database=hair_salon;uid=root;pwd=PASSWORD;"
     }
-  } ```
-
-and save that file. (Be sure to replace PASSWORD with the password you provided during installation).
+  } 
+  ```
 * (Guess what: we're still using terminal from inside HairSalon/) Enter ```dotnet build```
 * After a successful build, run the project by entering ```dotnet run``` (you guessed it: in terminal).
 * You should get a _Now listening on:_ line with the path of where its running. (ie: http://localhost.5000) Hold command and click it to open it up with your default browser.
