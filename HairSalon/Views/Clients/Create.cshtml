@@ -15,6 +15,6 @@
     @Html.LabelFor(model => model.PhoneNumber, "Phone Number:")
     @Html.TextBoxFor(model => model.PhoneNumber, new {required = "required"})
   </div>
-<button class="btn-purple">@Html.ActionLink("Back", "Details", "Stylists", new {id = ViewBag.StylistId})</button>
-<input class="btn-blue" type="submit" value="Add">
+  <button class="btn-purple">@Html.ActionLink("Back", "Details", "Stylists", new {id = ViewBag.StylistId})</button>
+  <input class="btn-blue" type="submit" value="Add">
 }
